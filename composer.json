@@ -1,0 +1,26 @@
+{
+    "name": "xytoki/stop-my-bills",
+    "description": "auto stop bills when having no money for Tencent Cloud and Aliyun.",
+    "type": "project",
+    "require": {
+        "tencentcloud/tencentcloud-sdk-php": "^3.0",
+        "alibabacloud/sdk": "^1.8",
+        "symfony/dotenv": "^5.0",
+        "mattmezza/logger": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "xyToki\\StopMyBills\\": "./"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "xytoki",
+            "email": "7547189+xytoki@users.noreply.github.com"
+        }
+    ]
+}
