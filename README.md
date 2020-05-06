@@ -4,12 +4,14 @@
 
 ### 支持的服务
  - 腾讯云 qcloud tencentcloud
-     - CDN
+     - 余额检测
+     - CDN日流量检测
+     - 停止CDN
  - 阿里云 aliyun alibabacloud
-     - CDN
+     - 余额检测
+     - 停止CDN
 
-### 将要支持的通知方式（TODO）
- - 腾讯云云监控 短信提醒
+### 支持的通知方式
  - Server酱 微信提醒
 
 ### 运行环境
@@ -31,8 +33,17 @@ XYBILL_<name>_providerCreds_sk=
 XYBILL_<name>_minAmount=5 
 #日志详细度
 LOG_LEVEL=INFO
+
+#配置腾讯CDM日流量上限：
+XYBILL_<name>=TencentCloudCDNFlow
+#Secret ID
+XYBILL_<name>_providerCreds_ak= 
+#Secret Key
+XYBILL_<name>_providerCreds_sk= 
+#最大日流量，MiB
+XYBILL_<name>_maxAmount=10240 #10GiB
 ```
 
 ### 云服务权限
- - 如使用子账号，腾讯云需要启用`QCloudFinanceFullAccess`策略和自行建立的拥有CDN完全访问权限的策略  
- - 如使用子账号，阿里云需要启用`AliyunCDNFullAccess`策略和`AliyunBSSFullAccess`策略。
+ - 如使用子账号，腾讯云需要启用`QcloudCDNFullAccess`和`QCloudFinanceFullAccess`策略。
+ - 如使用子账号，阿里云需要启用`AliyunCDNFullAccess`和`AliyunBSSFullAccess`策略。
