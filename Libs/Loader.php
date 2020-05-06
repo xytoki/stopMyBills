@@ -15,9 +15,9 @@ class Loader{
         }
         if(!getenv("LOG_STRATEGY"))putenv("LOG_STRATEGY=STDOUT");
         if(!getenv("LOG_LEVEL"))putenv("LOG_LEVEL=DEBUG");
-        return self::parseEnv();
+        return [self::parseEnv("XYBILL"),self::parseEnv("XYCB")];
     }
-    static function parseEnv(){
+    static function parseEnv($prefixR){
         ksort($_ENV);
         $configs=[];
         foreach($_ENV as $k=>$value){
@@ -27,7 +27,7 @@ class Loader{
             //   0      1     2             3
             $var=str_replace("_[END]","",$var);
             $var=str_replace("[END]","",$var);
-            if($prefix!="XYBILL")continue;
+            if($prefix!=$prefixR)continue;
             if(!isset($configs[$name])){
                 $configs[$name]=new Config();
                 $configs[$name]->name = $name;

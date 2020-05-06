@@ -31,6 +31,8 @@ XYBILL_<name>_providerCreds_ak=
 XYBILL_<name>_providerCreds_sk= 
 #最小余额
 XYBILL_<name>_minAmount=5 
+#回调通知，对应下方配置，多个逗号分隔
+XYBILL_<name>_callback=<callback_name>
 #日志详细度
 LOG_LEVEL=INFO
 
@@ -42,6 +44,10 @@ XYBILL_<name>_providerCreds_ak=
 XYBILL_<name>_providerCreds_sk= 
 #最大日流量，MiB
 XYBILL_<name>_maxAmount=10240 #10GiB
+
+#Server酱微信通知 回调配置
+XYCB_<callback_name>=ServerChan
+XYCB_<callback_name>_sckey=#你的sckey
 ```
 
 ### 云服务权限

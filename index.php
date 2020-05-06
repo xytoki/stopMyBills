@@ -12,9 +12,9 @@ function l(){
     return $logger;
 }
 function main_handler($event=[],$context=[]){
-    $config = Loader::load();
+    list($config,$callbacks) = Loader::load();
     foreach( $config as $one ){
-        Checker::check($one);
+        Checker::check($one,$callbacks);
     }
     return true;
 }

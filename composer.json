@@ -6,7 +6,8 @@
         "tencentcloud/tencentcloud-sdk-php": "^3.0",
         "alibabacloud/sdk": "^1.8",
         "symfony/dotenv": "^5.0",
-        "mattmezza/logger": "^1.0"
+        "mattmezza/logger": "^1.0",
+        "php-curl-class/php-curl-class": "^8.8"
     },
     "autoload": {
         "psr-4": {
